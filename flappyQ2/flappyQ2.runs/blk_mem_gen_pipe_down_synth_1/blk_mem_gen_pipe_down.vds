@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Dec 31 19:32:49 2019
+# Process ID: 2244
+# Current directory: C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.runs/blk_mem_gen_pipe_down_synth_1
+# Command line: vivado.exe -log blk_mem_gen_pipe_down.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source blk_mem_gen_pipe_down.tcl
+# Log file: C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.runs/blk_mem_gen_pipe_down_synth_1/blk_mem_gen_pipe_down.vds
+# Journal file: C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.runs/blk_mem_gen_pipe_down_synth_1\vivado.jou
+#-----------------------------------------------------------
+source blk_mem_gen_pipe_down.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/engin/Documents/Logic_Design_Laboratory/smaple_code/Keyboard Sample Code/Keyboard Sample Code/Keyboard Sample Code/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is c:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.cache/ip 
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP blk_mem_gen_pipe_down, cache-ID = 80c21d5fddd037f2.
+INFO: [Common 17-206] Exiting Vivado at Tue Dec 31 19:33:00 2019...

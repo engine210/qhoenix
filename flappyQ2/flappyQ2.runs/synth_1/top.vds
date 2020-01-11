@@ -1,0 +1,850 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Dec 31 20:42:20 2019
+# Process ID: 2744
+# Current directory: C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.runs/synth_1
+# Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+# Log file: C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.runs/synth_1/top.vds
+# Journal file: C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source top.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/engin/Documents/Logic_Design_Laboratory/smaple_code/Keyboard Sample Code/Keyboard Sample Code/Keyboard Sample Code/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is c:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.cache/ip 
+Command: synth_design -top top -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 13776 
+WARNING: [Synth 8-2611] redeclaration of ansi port offset is not allowed [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/get_background_offset.v:18]
+WARNING: [Synth 8-2611] redeclaration of ansi port bird_pos is not allowed [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/get_bird_pos.v:11]
+WARNING: [Synth 8-6901] identifier 'HOLD' is used before its declaration [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/get_bird_pos.v:14]
+WARNING: [Synth 8-2611] redeclaration of ansi port pipe1_X is not allowed [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/get_pipes_pos.v:22]
+WARNING: [Synth 8-2611] redeclaration of ansi port pipe1_Y is not allowed [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/get_pipes_pos.v:23]
+WARNING: [Synth 8-2611] redeclaration of ansi port pipe2_X is not allowed [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/get_pipes_pos.v:24]
+WARNING: [Synth 8-2611] redeclaration of ansi port pipe2_Y is not allowed [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/get_pipes_pos.v:25]
+WARNING: [Synth 8-2611] redeclaration of ansi port current_score is not allowed [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/get_pipes_pos.v:32]
+WARNING: [Synth 8-2611] redeclaration of ansi port stateX is not allowed [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/qlearning.v:9]
+WARNING: [Synth 8-2611] redeclaration of ansi port stateY is not allowed [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/qlearning.v:9]
+WARNING: [Synth 8-2611] redeclaration of ansi port jump is not allowed [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/qlearning.v:58]
+WARNING: [Synth 8-2611] redeclaration of ansi port result is not allowed [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/random_gen.v:10]
+WARNING: [Synth 8-6901] identifier 'jump_ql' is used before its declaration [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/top.v:67]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 722.117 ; gain = 184.957
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/top.v:3]
+INFO: [Synth 8-6157] synthesizing module 'Clock_Divider_2' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/clock_divider.v:3]
+	Parameter n bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Clock_Divider_2' (1#1) [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/clock_divider.v:3]
+INFO: [Synth 8-6157] synthesizing module 'vga_controller' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/vga.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'vga_controller' (2#1) [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/vga.v:6]
+INFO: [Synth 8-6157] synthesizing module 'KeyboardDecoder' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/keyboard.v:21]
+	Parameter INIT bound to: 2'b00 
+	Parameter WAIT_FOR_SIGNAL bound to: 2'b01 
+	Parameter GET_SIGNAL_DOWN bound to: 2'b10 
+	Parameter WAIT_RELEASE bound to: 2'b11 
+	Parameter IS_INIT bound to: 8'b10101010 
+	Parameter IS_EXTEND bound to: 8'b11100000 
+	Parameter IS_BREAK bound to: 8'b11110000 
+INFO: [Synth 8-6157] synthesizing module 'KeyboardCtrl_0' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.runs/synth_1/.Xil/Vivado-2744-DESKTOP-B1D4GR4/realtime/KeyboardCtrl_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'KeyboardCtrl_0' (3#1) [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.runs/synth_1/.Xil/Vivado-2744-DESKTOP-B1D4GR4/realtime/KeyboardCtrl_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'OnePulse' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/keyboard.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'OnePulse' (4#1) [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/keyboard.v:3]
+INFO: [Synth 8-226] default block is never used [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/keyboard.v:84]
+INFO: [Synth 8-6155] done synthesizing module 'KeyboardDecoder' (5#1) [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/keyboard.v:21]
+INFO: [Synth 8-6157] synthesizing module 'clk_expander' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/button.v:27]
+INFO: [Synth 8-6155] done synthesizing module 'clk_expander' (6#1) [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/button.v:27]
+INFO: [Synth 8-6157] synthesizing module 'Clock_Divider' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/clock_divider.v:19]
+	Parameter n bound to: 1666666 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Clock_Divider' (7#1) [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/clock_divider.v:19]
+INFO: [Synth 8-6157] synthesizing module 'qlearning' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/qlearning.v:33]
+	Parameter INIT_REG bound to: 2'b00 
+	Parameter HOLD bound to: 2'b01 
+	Parameter PLAY bound to: 2'b10 
+	Parameter DEAD bound to: 2'b11 
+INFO: [Synth 8-6157] synthesizing module 'getQLState' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/qlearning.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'getQLState' (8#1) [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/qlearning.v:3]
+INFO: [Synth 8-6157] synthesizing module 'random_gen' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/random_gen.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'random_gen' (9#1) [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/random_gen.v:3]
+INFO: [Synth 8-226] default block is never used [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/qlearning.v:92]
+WARNING: [Synth 8-5856] 3D RAM qtable_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
+INFO: [Synth 8-6155] done synthesizing module 'qlearning' (10#1) [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/qlearning.v:33]
+INFO: [Synth 8-6157] synthesizing module 'get_bird_pos' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/get_bird_pos.v:3]
+	Parameter HOLD bound to: 5'b00000 
+	Parameter JUMP1 bound to: 5'b00001 
+	Parameter JUMP2 bound to: 5'b00010 
+	Parameter JUMP3 bound to: 5'b00011 
+	Parameter JUMP4 bound to: 5'b00100 
+	Parameter JUMP5 bound to: 5'b00101 
+	Parameter JUMP6 bound to: 5'b00110 
+	Parameter JUMP7 bound to: 5'b00111 
+	Parameter JUMP8 bound to: 5'b01000 
+	Parameter JUMP9 bound to: 5'b01001 
+	Parameter JUMP10 bound to: 5'b01010 
+	Parameter JUMP11 bound to: 5'b01011 
+	Parameter JUMP12 bound to: 5'b01100 
+	Parameter FALL1 bound to: 5'b01101 
+	Parameter FALL2 bound to: 5'b01110 
+	Parameter FALL3 bound to: 5'b01111 
+	Parameter FALL4 bound to: 5'b10000 
+	Parameter FALL5 bound to: 5'b10001 
+	Parameter FALL6 bound to: 5'b10010 
+	Parameter FALL7 bound to: 5'b10011 
+	Parameter FALL8 bound to: 5'b10100 
+	Parameter FALL9 bound to: 5'b10101 
+	Parameter FALL10 bound to: 5'b10110 
+	Parameter FALL11 bound to: 5'b10111 
+	Parameter FALL12 bound to: 5'b11000 
+	Parameter FALL13 bound to: 5'b11001 
+	Parameter FALL14 bound to: 5'b11010 
+	Parameter DEAD bound to: 5'b11011 
+	Parameter OVERTOP bound to: 5'b11011 
+INFO: [Synth 8-6155] done synthesizing module 'get_bird_pos' (11#1) [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/get_bird_pos.v:3]
+INFO: [Synth 8-6157] synthesizing module 'collision_detection' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/collision_detection.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'collision_detection' (12#1) [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/collision_detection.v:3]
+INFO: [Synth 8-6157] synthesizing module 'get_background_offset' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/get_background_offset.v:3]
+	Parameter WAIT bound to: 3'b000 
+	Parameter PLAY bound to: 3'b001 
+	Parameter DEAD bound to: 3'b010 
+INFO: [Synth 8-6155] done synthesizing module 'get_background_offset' (13#1) [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/get_background_offset.v:3]
+INFO: [Synth 8-6157] synthesizing module 'get_pipes_pos' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/get_pipes_pos.v:3]
+	Parameter WAIT bound to: 3'b000 
+	Parameter PLAY bound to: 3'b001 
+	Parameter DEAD bound to: 3'b010 
+INFO: [Synth 8-6155] done synthesizing module 'get_pipes_pos' (14#1) [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/get_pipes_pos.v:3]
+INFO: [Synth 8-6157] synthesizing module 'pixel_gen' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/pixel_gen.v:3]
+	Parameter birdX bound to: 69 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_background' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.runs/synth_1/.Xil/Vivado-2744-DESKTOP-B1D4GR4/realtime/blk_mem_gen_background_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_background' (15#1) [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.runs/synth_1/.Xil/Vivado-2744-DESKTOP-B1D4GR4/realtime/blk_mem_gen_background_stub.v:6]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (15) of module 'blk_mem_gen_background' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/pixel_gen.v:164]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_base' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.runs/synth_1/.Xil/Vivado-2744-DESKTOP-B1D4GR4/realtime/blk_mem_gen_base_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_base' (16#1) [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.runs/synth_1/.Xil/Vivado-2744-DESKTOP-B1D4GR4/realtime/blk_mem_gen_base_stub.v:6]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (13) of module 'blk_mem_gen_base' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/pixel_gen.v:169]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_bird' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.runs/synth_1/.Xil/Vivado-2744-DESKTOP-B1D4GR4/realtime/blk_mem_gen_bird_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_bird' (17#1) [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.runs/synth_1/.Xil/Vivado-2744-DESKTOP-B1D4GR4/realtime/blk_mem_gen_bird_stub.v:6]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (10) of module 'blk_mem_gen_bird' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/pixel_gen.v:174]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_pipe_up' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.runs/synth_1/.Xil/Vivado-2744-DESKTOP-B1D4GR4/realtime/blk_mem_gen_pipe_up_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_pipe_up' (18#1) [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.runs/synth_1/.Xil/Vivado-2744-DESKTOP-B1D4GR4/realtime/blk_mem_gen_pipe_up_stub.v:6]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (15) of module 'blk_mem_gen_pipe_up' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/pixel_gen.v:179]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_pipe_down' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.runs/synth_1/.Xil/Vivado-2744-DESKTOP-B1D4GR4/realtime/blk_mem_gen_pipe_down_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_pipe_down' (19#1) [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.runs/synth_1/.Xil/Vivado-2744-DESKTOP-B1D4GR4/realtime/blk_mem_gen_pipe_down_stub.v:6]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (15) of module 'blk_mem_gen_pipe_down' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/pixel_gen.v:184]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (15) of module 'blk_mem_gen_pipe_up' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/pixel_gen.v:189]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (15) of module 'blk_mem_gen_pipe_down' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/pixel_gen.v:194]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_num_0' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.runs/synth_1/.Xil/Vivado-2744-DESKTOP-B1D4GR4/realtime/blk_mem_gen_num_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_num_0' (20#1) [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.runs/synth_1/.Xil/Vivado-2744-DESKTOP-B1D4GR4/realtime/blk_mem_gen_num_0_stub.v:6]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (10) of module 'blk_mem_gen_num_0' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/pixel_gen.v:200]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_num_1' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.runs/synth_1/.Xil/Vivado-2744-DESKTOP-B1D4GR4/realtime/blk_mem_gen_num_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_num_1' (21#1) [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.runs/synth_1/.Xil/Vivado-2744-DESKTOP-B1D4GR4/realtime/blk_mem_gen_num_1_stub.v:6]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (10) of module 'blk_mem_gen_num_1' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/pixel_gen.v:206]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_num_2' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.runs/synth_1/.Xil/Vivado-2744-DESKTOP-B1D4GR4/realtime/blk_mem_gen_num_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_num_2' (22#1) [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.runs/synth_1/.Xil/Vivado-2744-DESKTOP-B1D4GR4/realtime/blk_mem_gen_num_2_stub.v:6]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (10) of module 'blk_mem_gen_num_2' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/pixel_gen.v:212]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_num_3' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.runs/synth_1/.Xil/Vivado-2744-DESKTOP-B1D4GR4/realtime/blk_mem_gen_num_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_num_3' (23#1) [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.runs/synth_1/.Xil/Vivado-2744-DESKTOP-B1D4GR4/realtime/blk_mem_gen_num_3_stub.v:6]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (10) of module 'blk_mem_gen_num_3' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/pixel_gen.v:218]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_num_4' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.runs/synth_1/.Xil/Vivado-2744-DESKTOP-B1D4GR4/realtime/blk_mem_gen_num_4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_num_4' (24#1) [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.runs/synth_1/.Xil/Vivado-2744-DESKTOP-B1D4GR4/realtime/blk_mem_gen_num_4_stub.v:6]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (10) of module 'blk_mem_gen_num_4' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/pixel_gen.v:224]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_num_5' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.runs/synth_1/.Xil/Vivado-2744-DESKTOP-B1D4GR4/realtime/blk_mem_gen_num_5_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_num_5' (25#1) [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.runs/synth_1/.Xil/Vivado-2744-DESKTOP-B1D4GR4/realtime/blk_mem_gen_num_5_stub.v:6]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (10) of module 'blk_mem_gen_num_5' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/pixel_gen.v:230]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_num_6' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.runs/synth_1/.Xil/Vivado-2744-DESKTOP-B1D4GR4/realtime/blk_mem_gen_num_6_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_num_6' (26#1) [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.runs/synth_1/.Xil/Vivado-2744-DESKTOP-B1D4GR4/realtime/blk_mem_gen_num_6_stub.v:6]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (10) of module 'blk_mem_gen_num_6' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/pixel_gen.v:236]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_num_7' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.runs/synth_1/.Xil/Vivado-2744-DESKTOP-B1D4GR4/realtime/blk_mem_gen_num_7_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_num_7' (27#1) [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.runs/synth_1/.Xil/Vivado-2744-DESKTOP-B1D4GR4/realtime/blk_mem_gen_num_7_stub.v:6]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (10) of module 'blk_mem_gen_num_7' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/pixel_gen.v:242]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_num_8' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.runs/synth_1/.Xil/Vivado-2744-DESKTOP-B1D4GR4/realtime/blk_mem_gen_num_8_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_num_8' (28#1) [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.runs/synth_1/.Xil/Vivado-2744-DESKTOP-B1D4GR4/realtime/blk_mem_gen_num_8_stub.v:6]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (10) of module 'blk_mem_gen_num_8' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/pixel_gen.v:248]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_num_9' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.runs/synth_1/.Xil/Vivado-2744-DESKTOP-B1D4GR4/realtime/blk_mem_gen_num_9_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_num_9' (29#1) [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.runs/synth_1/.Xil/Vivado-2744-DESKTOP-B1D4GR4/realtime/blk_mem_gen_num_9_stub.v:6]
+WARNING: [Synth 8-689] width (17) of port connection 'addra' does not match port width (10) of module 'blk_mem_gen_num_9' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/pixel_gen.v:254]
+INFO: [Synth 8-6155] done synthesizing module 'pixel_gen' (30#1) [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/pixel_gen.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'top' (31#1) [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/top.v:3]
+WARNING: [Synth 8-3331] design pixel_gen has unconnected port rst
+WARNING: [Synth 8-3331] design top has unconnected port btnU
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 919.707 ; gain = 382.547
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 919.707 ; gain = 382.547
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 919.707 ; gain = 382.547
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/ip/blk_mem_gen_background/blk_mem_gen_background/blk_mem_gen_background_in_context.xdc] for cell 'pixel_gen_inst/blk_mem_gen_background_inst'
+Finished Parsing XDC File [c:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/ip/blk_mem_gen_background/blk_mem_gen_background/blk_mem_gen_background_in_context.xdc] for cell 'pixel_gen_inst/blk_mem_gen_background_inst'
+Parsing XDC File [c:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/ip/blk_mem_gen_base/blk_mem_gen_base/blk_mem_gen_base_in_context.xdc] for cell 'pixel_gen_inst/blk_mem_gen_base_inst'
+Finished Parsing XDC File [c:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/ip/blk_mem_gen_base/blk_mem_gen_base/blk_mem_gen_base_in_context.xdc] for cell 'pixel_gen_inst/blk_mem_gen_base_inst'
+Parsing XDC File [c:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/ip/blk_mem_gen_bird/blk_mem_gen_bird/blk_mem_gen_bird_in_context.xdc] for cell 'pixel_gen_inst/blk_mem_gen_bird_inst'
+Finished Parsing XDC File [c:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/ip/blk_mem_gen_bird/blk_mem_gen_bird/blk_mem_gen_bird_in_context.xdc] for cell 'pixel_gen_inst/blk_mem_gen_bird_inst'
+Parsing XDC File [c:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/ip/blk_mem_gen_pipe_up/blk_mem_gen_pipe_up/blk_mem_gen_pipe_up_in_context.xdc] for cell 'pixel_gen_inst/blk_mem_gen_pipe1_up_inst'
+Finished Parsing XDC File [c:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/ip/blk_mem_gen_pipe_up/blk_mem_gen_pipe_up/blk_mem_gen_pipe_up_in_context.xdc] for cell 'pixel_gen_inst/blk_mem_gen_pipe1_up_inst'
+Parsing XDC File [c:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/ip/blk_mem_gen_pipe_up/blk_mem_gen_pipe_up/blk_mem_gen_pipe_up_in_context.xdc] for cell 'pixel_gen_inst/blk_mem_gen_pipe2_up_inst'
+Finished Parsing XDC File [c:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/ip/blk_mem_gen_pipe_up/blk_mem_gen_pipe_up/blk_mem_gen_pipe_up_in_context.xdc] for cell 'pixel_gen_inst/blk_mem_gen_pipe2_up_inst'
+Parsing XDC File [c:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/ip/blk_mem_gen_pipe_down/blk_mem_gen_pipe_down/blk_mem_gen_pipe_down_in_context.xdc] for cell 'pixel_gen_inst/blk_mem_gen_pipe1_down_inst'
+Finished Parsing XDC File [c:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/ip/blk_mem_gen_pipe_down/blk_mem_gen_pipe_down/blk_mem_gen_pipe_down_in_context.xdc] for cell 'pixel_gen_inst/blk_mem_gen_pipe1_down_inst'
+Parsing XDC File [c:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/ip/blk_mem_gen_pipe_down/blk_mem_gen_pipe_down/blk_mem_gen_pipe_down_in_context.xdc] for cell 'pixel_gen_inst/blk_mem_gen_pipe2_down_inst'
+Finished Parsing XDC File [c:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/ip/blk_mem_gen_pipe_down/blk_mem_gen_pipe_down/blk_mem_gen_pipe_down_in_context.xdc] for cell 'pixel_gen_inst/blk_mem_gen_pipe2_down_inst'
+Parsing XDC File [c:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0/KeyboardCtrl_0_in_context.xdc] for cell 'key_de/inst'
+Finished Parsing XDC File [c:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0/KeyboardCtrl_0_in_context.xdc] for cell 'key_de/inst'
+Parsing XDC File [c:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/ip/blk_mem_gen_num_0/blk_mem_gen_num_0/blk_mem_gen_num_0_in_context.xdc] for cell 'pixel_gen_inst/blk_mem_gen_0_inst'
+Finished Parsing XDC File [c:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/ip/blk_mem_gen_num_0/blk_mem_gen_num_0/blk_mem_gen_num_0_in_context.xdc] for cell 'pixel_gen_inst/blk_mem_gen_0_inst'
+Parsing XDC File [c:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/ip/blk_mem_gen_num_2/blk_mem_gen_num_2/blk_mem_gen_num_2_in_context.xdc] for cell 'pixel_gen_inst/blk_mem_gen_2_inst'
+Finished Parsing XDC File [c:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/ip/blk_mem_gen_num_2/blk_mem_gen_num_2/blk_mem_gen_num_2_in_context.xdc] for cell 'pixel_gen_inst/blk_mem_gen_2_inst'
+Parsing XDC File [c:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/ip/blk_mem_gen_num_3/blk_mem_gen_num_3/blk_mem_gen_num_3_in_context.xdc] for cell 'pixel_gen_inst/blk_mem_gen_3_inst'
+Finished Parsing XDC File [c:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/ip/blk_mem_gen_num_3/blk_mem_gen_num_3/blk_mem_gen_num_3_in_context.xdc] for cell 'pixel_gen_inst/blk_mem_gen_3_inst'
+Parsing XDC File [c:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/ip/blk_mem_gen_num_4/blk_mem_gen_num_4/blk_mem_gen_num_4_in_context.xdc] for cell 'pixel_gen_inst/blk_mem_gen_4_inst'
+Finished Parsing XDC File [c:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/ip/blk_mem_gen_num_4/blk_mem_gen_num_4/blk_mem_gen_num_4_in_context.xdc] for cell 'pixel_gen_inst/blk_mem_gen_4_inst'
+Parsing XDC File [c:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/ip/blk_mem_gen_num_5/blk_mem_gen_num_5/blk_mem_gen_num_5_in_context.xdc] for cell 'pixel_gen_inst/blk_mem_gen_5_inst'
+Finished Parsing XDC File [c:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/ip/blk_mem_gen_num_5/blk_mem_gen_num_5/blk_mem_gen_num_5_in_context.xdc] for cell 'pixel_gen_inst/blk_mem_gen_5_inst'
+Parsing XDC File [c:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/ip/blk_mem_gen_num_6/blk_mem_gen_num_6/blk_mem_gen_num_6_in_context.xdc] for cell 'pixel_gen_inst/blk_mem_gen_6_inst'
+Finished Parsing XDC File [c:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/ip/blk_mem_gen_num_6/blk_mem_gen_num_6/blk_mem_gen_num_6_in_context.xdc] for cell 'pixel_gen_inst/blk_mem_gen_6_inst'
+Parsing XDC File [c:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/ip/blk_mem_gen_num_7/blk_mem_gen_num_7/blk_mem_gen_num_7_in_context.xdc] for cell 'pixel_gen_inst/blk_mem_gen_7_inst'
+Finished Parsing XDC File [c:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/ip/blk_mem_gen_num_7/blk_mem_gen_num_7/blk_mem_gen_num_7_in_context.xdc] for cell 'pixel_gen_inst/blk_mem_gen_7_inst'
+Parsing XDC File [c:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/ip/blk_mem_gen_num_8/blk_mem_gen_num_8/blk_mem_gen_num_8_in_context.xdc] for cell 'pixel_gen_inst/blk_mem_gen_8_inst'
+Finished Parsing XDC File [c:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/ip/blk_mem_gen_num_8/blk_mem_gen_num_8/blk_mem_gen_num_8_in_context.xdc] for cell 'pixel_gen_inst/blk_mem_gen_8_inst'
+Parsing XDC File [c:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/ip/blk_mem_gen_num_9/blk_mem_gen_num_9/blk_mem_gen_num_9_in_context.xdc] for cell 'pixel_gen_inst/blk_mem_gen_9_inst'
+Finished Parsing XDC File [c:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/ip/blk_mem_gen_num_9/blk_mem_gen_num_9/blk_mem_gen_num_9_in_context.xdc] for cell 'pixel_gen_inst/blk_mem_gen_9_inst'
+Parsing XDC File [c:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/ip/blk_mem_gen_num_1_1/blk_mem_gen_num_1/blk_mem_gen_num_1_in_context.xdc] for cell 'pixel_gen_inst/blk_mem_gen_1_inst'
+Finished Parsing XDC File [c:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/ip/blk_mem_gen_num_1_1/blk_mem_gen_num_1/blk_mem_gen_num_1_in_context.xdc] for cell 'pixel_gen_inst/blk_mem_gen_1_inst'
+Parsing XDC File [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/constrs_1/new/cons.xdc]
+Finished Parsing XDC File [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/constrs_1/new/cons.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/constrs_1/new/cons.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1062.137 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.166 . Memory (MB): peak = 1062.137 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1062.137 ; gain = 524.977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1062.137 ; gain = 524.977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for PS2_CLK. (constraint file  c:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0/KeyboardCtrl_0_in_context.xdc, line 1).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for PS2_CLK. (constraint file  c:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0/KeyboardCtrl_0_in_context.xdc, line 2).
+Applied set_property IO_BUFFER_TYPE = NONE for PS2_DATA. (constraint file  c:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0/KeyboardCtrl_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for PS2_DATA. (constraint file  c:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0/KeyboardCtrl_0_in_context.xdc, line 4).
+Applied set_property DONT_TOUCH = true for pixel_gen_inst/blk_mem_gen_background_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for pixel_gen_inst/blk_mem_gen_base_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for pixel_gen_inst/blk_mem_gen_bird_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for pixel_gen_inst/blk_mem_gen_pipe1_up_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for pixel_gen_inst/blk_mem_gen_pipe2_up_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for pixel_gen_inst/blk_mem_gen_pipe1_down_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for pixel_gen_inst/blk_mem_gen_pipe2_down_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for key_de/inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for pixel_gen_inst/blk_mem_gen_0_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for pixel_gen_inst/blk_mem_gen_2_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for pixel_gen_inst/blk_mem_gen_3_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for pixel_gen_inst/blk_mem_gen_4_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for pixel_gen_inst/blk_mem_gen_5_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for pixel_gen_inst/blk_mem_gen_6_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for pixel_gen_inst/blk_mem_gen_7_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for pixel_gen_inst/blk_mem_gen_8_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for pixel_gen_inst/blk_mem_gen_9_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for pixel_gen_inst/blk_mem_gen_1_inst. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1062.137 ; gain = 524.977
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'KeyboardDecoder'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'get_bird_pos'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'get_background_offset'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'get_pipes_pos'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    INIT |                               00 |                               00
+         WAIT_FOR_SIGNAL |                               01 |                               01
+         GET_SIGNAL_DOWN |                               10 |                               10
+            WAIT_RELEASE |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'KeyboardDecoder'
+WARNING: [Synth 8-327] inferring latch for variable 'jump_reg' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/qlearning.v:118]
+WARNING: [Synth 8-327] inferring latch for variable 'next_prev_bird_state_Y_reg' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/qlearning.v:135]
+WARNING: [Synth 8-327] inferring latch for variable 'next_prev_action_reg' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/qlearning.v:136]
+WARNING: [Synth 8-327] inferring latch for variable 'next_init_Z_reg' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/qlearning.v:102]
+WARNING: [Synth 8-327] inferring latch for variable 'next_init_Y_reg' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/qlearning.v:104]
+WARNING: [Synth 8-327] inferring latch for variable 'data_to_write_reg' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/qlearning.v:99]
+WARNING: [Synth 8-327] inferring latch for variable 'next_init_X_reg' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/qlearning.v:103]
+WARNING: [Synth 8-327] inferring latch for variable 'next_prev_bird_state_X_reg' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/qlearning.v:134]
+WARNING: [Synth 8-327] inferring latch for variable 'get_random_reg' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/qlearning.v:77]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    HOLD |                            00000 |                            00000
+                   JUMP1 |                            00001 |                            00001
+                   JUMP2 |                            00010 |                            00010
+                   JUMP3 |                            00011 |                            00011
+                   JUMP4 |                            00100 |                            00100
+                   JUMP5 |                            00101 |                            00101
+                   JUMP6 |                            00110 |                            00110
+                   JUMP7 |                            00111 |                            00111
+                   JUMP8 |                            01000 |                            01000
+                   JUMP9 |                            01001 |                            01001
+                  JUMP10 |                            01010 |                            01010
+                  JUMP11 |                            01011 |                            01011
+                  JUMP12 |                            01100 |                            01100
+                   FALL1 |                            01101 |                            01101
+                   FALL2 |                            01110 |                            01110
+                   FALL3 |                            01111 |                            01111
+                   FALL4 |                            10000 |                            10000
+                   FALL5 |                            10001 |                            10001
+                   FALL6 |                            10010 |                            10010
+                   FALL7 |                            10011 |                            10011
+                   FALL8 |                            10100 |                            10100
+                   FALL9 |                            10101 |                            10101
+                  FALL10 |                            10110 |                            10110
+                  FALL11 |                            10111 |                            10111
+                  FALL12 |                            11000 |                            11000
+                  FALL13 |                            11001 |                            11001
+                  FALL14 |                            11010 |                            11010
+                    DEAD |                            11011 |                            11011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'get_bird_pos'
+WARNING: [Synth 8-327] inferring latch for variable 'next_offset_reg' [C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.srcs/sources_1/new/get_background_offset.v:24]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    WAIT |                               00 |                              000
+                    PLAY |                               01 |                              001
+                    DEAD |                               10 |                              010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'get_background_offset'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    WAIT |                               00 |                              000
+                    PLAY |                               01 |                              001
+                    DEAD |                               10 |                              010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'get_pipes_pos'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1062.137 ; gain = 524.977
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+---------------+------------+----------+
+|      |RTL Partition  |Replication |Instances |
++------+---------------+------------+----------+
+|1     |qlearning__GB0 |           1|     33218|
+|2     |qlearning__GB1 |           1|      6946|
+|3     |qlearning__GB2 |           1|     18304|
+|4     |qlearning__GB3 |           1|     13512|
+|5     |pixel_gen__GB0 |           1|     17371|
+|6     |pixel_gen__GB1 |           1|      3452|
+|7     |top__GC0       |           1|      7071|
++------+---------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 31    
+	   3 Input     32 Bit       Adders := 8     
+	   2 Input     28 Bit       Adders := 4     
+	   2 Input     22 Bit       Adders := 1     
+	   2 Input     21 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 3     
+	   2 Input     10 Bit       Adders := 19    
+	   3 Input     10 Bit       Adders := 2     
+	   2 Input      9 Bit       Adders := 4     
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 2     
+	   2 Input      2 Bit       Adders := 1     
++---XORs : 
+	   4 Input      1 Bit         XORs := 2     
++---Registers : 
+	              512 Bit    Registers := 1     
+	               27 Bit    Registers := 1     
+	               22 Bit    Registers := 729   
+	               16 Bit    Registers := 2     
+	               10 Bit    Registers := 5     
+	                9 Bit    Registers := 10    
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 2     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 11    
++---Multipliers : 
+	                 4x32  Multipliers := 4     
+	                 5x32  Multipliers := 1     
+	                 6x32  Multipliers := 5     
+	                 9x32  Multipliers := 2     
++---Muxes : 
+	   2 Input    512 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 8     
+	   4 Input     28 Bit        Muxes := 1     
+	   2 Input     28 Bit        Muxes := 7     
+	   2 Input     22 Bit        Muxes := 4     
+	   2 Input     10 Bit        Muxes := 30    
+	   4 Input     10 Bit        Muxes := 1     
+	  28 Input     10 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 3     
+	   3 Input      9 Bit        Muxes := 3     
+	   3 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 4     
+	  28 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 54    
+	   2 Input      2 Bit        Muxes := 10    
+	   5 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2310  
+	   4 Input      1 Bit        Muxes := 15    
+	  28 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module top 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module random_gen__1 
+Detailed RTL Component Info : 
++---XORs : 
+	   4 Input      1 Bit         XORs := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+Module getQLState 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
+	   3 Input     10 Bit       Adders := 2     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 6     
+Module qlearning 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 12    
+	   2 Input     28 Bit       Adders := 4     
+	   2 Input      6 Bit       Adders := 2     
++---Registers : 
+	               22 Bit    Registers := 728   
+	                6 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Multipliers : 
+	                 4x32  Multipliers := 4     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 8     
+	   4 Input     28 Bit        Muxes := 1     
+	   2 Input     28 Bit        Muxes := 7     
+	   2 Input     22 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2297  
+	   4 Input      1 Bit        Muxes := 8     
+Module pixel_gen 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 16    
+	   3 Input     32 Bit       Adders := 8     
+	   2 Input     11 Bit       Adders := 3     
++---Registers : 
+	               10 Bit    Registers := 1     
+	                9 Bit    Registers := 5     
++---Multipliers : 
+	                 5x32  Multipliers := 1     
+	                 6x32  Multipliers := 5     
+	                 9x32  Multipliers := 2     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 10    
+Module Clock_Divider_2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
+Module vga_controller 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
++---Registers : 
+	               10 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+Module OnePulse 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module KeyboardDecoder 
+Detailed RTL Component Info : 
++---Registers : 
+	              512 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input    512 Bit        Muxes := 1     
+	   4 Input     10 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 8     
+	   4 Input      1 Bit        Muxes := 7     
+Module clk_expander 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     22 Bit       Adders := 1     
++---Registers : 
+	               22 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     22 Bit        Muxes := 3     
+Module Clock_Divider 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     21 Bit       Adders := 1     
++---Registers : 
+	               27 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module get_bird_pos 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 14    
++---Registers : 
+	               10 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 12    
+	  28 Input     10 Bit        Muxes := 1     
+	  28 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 54    
+	  28 Input      1 Bit        Muxes := 1     
+Module collision_detection 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 3     
+Module get_background_offset 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
++---Registers : 
+	                9 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      9 Bit        Muxes := 1     
+	   3 Input      9 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+Module random_gen 
+Detailed RTL Component Info : 
++---XORs : 
+	   4 Input      1 Bit         XORs := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+Module get_pipes_pos 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 3     
+	   2 Input      7 Bit       Adders := 1     
++---Registers : 
+	                9 Bit    Registers := 4     
+	                7 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      9 Bit        Muxes := 2     
+	   3 Input      9 Bit        Muxes := 2     
+	   3 Input      7 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design top has unconnected port btnU
+INFO: [Synth 8-3886] merging instance 'i_0/cd600/num_reg[21]' (FDR) to 'i_0/cd600/num_reg[22]'
+INFO: [Synth 8-3886] merging instance 'i_0/cd600/num_reg[22]' (FDR) to 'i_0/cd600/num_reg[23]'
+INFO: [Synth 8-3886] merging instance 'i_0/cd600/num_reg[23]' (FDR) to 'i_0/cd600/num_reg[24]'
+INFO: [Synth 8-3886] merging instance 'i_0/cd600/num_reg[24]' (FDR) to 'i_0/cd600/num_reg[25]'
+INFO: [Synth 8-3886] merging instance 'i_0/cd600/num_reg[25]' (FDR) to 'i_0/cd600/num_reg[26]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/cd600/\num_reg[26] )
+WARNING: [Synth 8-3332] Sequential element (next_offset_reg[8]) is unused and will be removed from module get_background_offset.
+WARNING: [Synth 8-3332] Sequential element (next_offset_reg[7]) is unused and will be removed from module get_background_offset.
+WARNING: [Synth 8-3332] Sequential element (next_offset_reg[6]) is unused and will be removed from module get_background_offset.
+WARNING: [Synth 8-3332] Sequential element (next_offset_reg[5]) is unused and will be removed from module get_background_offset.
+WARNING: [Synth 8-3332] Sequential element (next_offset_reg[4]) is unused and will be removed from module get_background_offset.
+WARNING: [Synth 8-3332] Sequential element (next_offset_reg[3]) is unused and will be removed from module get_background_offset.
+WARNING: [Synth 8-3332] Sequential element (next_offset_reg[2]) is unused and will be removed from module get_background_offset.
+WARNING: [Synth 8-3332] Sequential element (next_offset_reg[1]) is unused and will be removed from module get_background_offset.
+WARNING: [Synth 8-3332] Sequential element (next_offset_reg[0]) is unused and will be removed from module get_background_offset.
+INFO: [Synth 8-3886] merging instance 'pixel_gen_insti_5/delay_pipe1_X_reg[0]' (FD) to 'pixel_gen_insti_5/delay_pipe2_X_reg[0]'
+INFO: [Synth 8-3886] merging instance 'pixel_gen_insti_5/delay_base_offset_reg[0]' (FD) to 'pixel_gen_insti_5/delay_pipe2_X_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pixel_gen_insti_5/\delay_pipe2_X_reg[0] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:29 ; elapsed = 00:01:36 . Memory (MB): peak = 1175.711 ; gain = 638.551
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+---------------+------------+----------+
+|      |RTL Partition  |Replication |Instances |
++------+---------------+------------+----------+
+|1     |qlearning__GB0 |           1|     30771|
+|2     |qlearning__GB1 |           1|      5836|
+|3     |qlearning__GB2 |           1|     16229|
+|4     |qlearning__GB3 |           1|     12141|
+|5     |pixel_gen__GB0 |           1|      9474|
+|6     |pixel_gen__GB1 |           1|      1888|
+|7     |top__GC0       |           1|      1883|
++------+---------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:37 ; elapsed = 00:01:44 . Memory (MB): peak = 1175.711 ; gain = 638.551
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:42 ; elapsed = 00:01:49 . Memory (MB): peak = 1175.711 ; gain = 638.551
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+---------------+------------+----------+
+|      |RTL Partition  |Replication |Instances |
++------+---------------+------------+----------+
+|1     |qlearning__GB0 |           1|     30771|
+|2     |qlearning__GB1 |           1|      5836|
+|3     |qlearning__GB2 |           1|     16229|
+|4     |qlearning__GB3 |           1|     12141|
+|5     |pixel_gen__GB0 |           1|      9437|
+|6     |pixel_gen__GB1 |           1|      1883|
+|7     |top__GC0       |           1|      1883|
++------+---------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:56 ; elapsed = 00:02:03 . Memory (MB): peak = 1175.711 ; gain = 638.551
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:02:01 ; elapsed = 00:02:08 . Memory (MB): peak = 1175.711 ; gain = 638.551
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:01 ; elapsed = 00:02:08 . Memory (MB): peak = 1175.711 ; gain = 638.551
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:04 ; elapsed = 00:02:10 . Memory (MB): peak = 1175.711 ; gain = 638.551
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:04 ; elapsed = 00:02:11 . Memory (MB): peak = 1175.711 ; gain = 638.551
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:06 ; elapsed = 00:02:13 . Memory (MB): peak = 1175.711 ; gain = 638.551
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:06 ; elapsed = 00:02:13 . Memory (MB): peak = 1175.711 ; gain = 638.551
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+-----------------------+----------+
+|      |BlackBox name          |Instances |
++------+-----------------------+----------+
+|1     |KeyboardCtrl_0         |         1|
+|2     |blk_mem_gen_background |         1|
+|3     |blk_mem_gen_base       |         1|
+|4     |blk_mem_gen_bird       |         1|
+|5     |blk_mem_gen_pipe_up    |         2|
+|6     |blk_mem_gen_pipe_down  |         2|
+|7     |blk_mem_gen_num_0      |         1|
+|8     |blk_mem_gen_num_1      |         1|
+|9     |blk_mem_gen_num_2      |         1|
+|10    |blk_mem_gen_num_3      |         1|
+|11    |blk_mem_gen_num_4      |         1|
+|12    |blk_mem_gen_num_5      |         1|
+|13    |blk_mem_gen_num_6      |         1|
+|14    |blk_mem_gen_num_7      |         1|
+|15    |blk_mem_gen_num_8      |         1|
+|16    |blk_mem_gen_num_9      |         1|
++------+-----------------------+----------+
+
+Report Cell Usage: 
++------+-------------------------+------+
+|      |Cell                     |Count |
++------+-------------------------+------+
+|1     |KeyboardCtrl_0           |     1|
+|2     |blk_mem_gen_background   |     1|
+|3     |blk_mem_gen_base         |     1|
+|4     |blk_mem_gen_bird         |     1|
+|5     |blk_mem_gen_num_0        |     1|
+|6     |blk_mem_gen_num_1        |     1|
+|7     |blk_mem_gen_num_2        |     1|
+|8     |blk_mem_gen_num_3        |     1|
+|9     |blk_mem_gen_num_4        |     1|
+|10    |blk_mem_gen_num_5        |     1|
+|11    |blk_mem_gen_num_6        |     1|
+|12    |blk_mem_gen_num_7        |     1|
+|13    |blk_mem_gen_num_8        |     1|
+|14    |blk_mem_gen_num_9        |     1|
+|15    |blk_mem_gen_pipe_down    |     1|
+|16    |blk_mem_gen_pipe_down__2 |     1|
+|17    |blk_mem_gen_pipe_up      |     1|
+|18    |blk_mem_gen_pipe_up__2   |     1|
+|19    |BUFG                     |     6|
+|20    |CARRY4                   |  1496|
+|21    |LUT1                     |   457|
+|22    |LUT2                     |  1783|
+|23    |LUT3                     |  4255|
+|24    |LUT4                     |  2200|
+|25    |LUT5                     |  1723|
+|26    |LUT6                     | 12103|
+|27    |MUXF7                    |  2111|
+|28    |MUXF8                    |   704|
+|29    |FDCE                     |    24|
+|30    |FDPE                     |     9|
+|31    |FDRE                     | 16220|
+|32    |FDSE                     |    36|
+|33    |LD                       |   182|
+|34    |IBUF                     |     3|
+|35    |OBUF                     |    14|
++------+-------------------------+------+
+
+Report Instance Areas: 
++------+-----------------+----------------------+------+
+|      |Instance         |Module                |Cells |
++------+-----------------+----------------------+------+
+|1     |top              |                      | 43542|
+|2     |  cd4            |Clock_Divider_2       |     4|
+|3     |  cd600          |Clock_Divider         |    33|
+|4     |  ex_1           |clk_expander          |    39|
+|5     |  gbo            |get_background_offset |    25|
+|6     |  gbp            |get_bird_pos          |   387|
+|7     |  gpp            |get_pipes_pos         |   705|
+|8     |    rg           |random_gen            |    74|
+|9     |  key_de         |KeyboardDecoder       |    53|
+|10    |    op           |OnePulse              |     4|
+|11    |  pixel_gen_inst |pixel_gen             |   896|
+|12    |  ql             |qlearning             | 34235|
+|13    |  vga_inst       |vga_controller        |  1744|
++------+-----------------+----------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:06 ; elapsed = 00:02:13 . Memory (MB): peak = 1175.711 ; gain = 638.551
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 20 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:48 ; elapsed = 00:02:07 . Memory (MB): peak = 1175.711 ; gain = 496.121
+Synthesis Optimization Complete : Time (s): cpu = 00:02:06 ; elapsed = 00:02:13 . Memory (MB): peak = 1175.711 ; gain = 638.551
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 4493 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1175.711 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 182 instances were transformed.
+  LD => LDCE: 182 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+96 Infos, 54 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:17 ; elapsed = 00:02:25 . Memory (MB): peak = 1175.711 ; gain = 880.660
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1175.711 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/engin/Documents/Logic_Design_Laboratory/final_project/flappyQ2/flappyQ2.runs/synth_1/top.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1175.711 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Dec 31 20:44:58 2019...

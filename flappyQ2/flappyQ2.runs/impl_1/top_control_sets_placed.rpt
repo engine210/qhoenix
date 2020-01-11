@@ -1,0 +1,832 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Dec 31 20:48:22 2019
+| Host         : DESKTOP-B1D4GR4 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
+| Design       : top
+| Device       : xc7a35t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |   754 |
+|    Minimum number of control sets                        |   754 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |  1560 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |   754 |
+| >= 0 to < 4        |     2 |
+| >= 4 to < 6        |     1 |
+| >= 6 to < 8        |     2 |
+| >= 8 to < 10       |     4 |
+| >= 10 to < 12      |     5 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     1 |
+| >= 16              |   738 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             283 |          120 |
+| No           | No                    | Yes                    |              63 |           15 |
+| No           | Yes                   | No                     |             120 |           49 |
+| Yes          | No                    | No                     |           16016 |         6329 |
+| Yes          | No                    | Yes                    |              57 |           12 |
+| Yes          | Yes                   | No                     |              61 |           28 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-------------------------------------------+---------------------------------------------------+-------------------------------+------------------+----------------+
+|                Clock Signal               |                   Enable Signal                   |        Set/Reset Signal       | Slice Load Count | Bel Load Count |
++-------------------------------------------+---------------------------------------------------+-------------------------------+------------------+----------------+
+|  ql/jump_reg_i_2_n_0                      |                                                   |                               |                1 |              1 |
+|  clk_25MHz_BUFG                           |                                                   | rst_IBUF                      |                2 |              2 |
+|  clk_IBUF_BUFG                            | key_de/inst/inst/Ps2Interface_i/bits_count        | rst_IBUF                      |                2 |              4 |
+|  clk_IBUF_BUFG                            |                                                   |                               |                4 |              7 |
+|  clk_fps_BUFG                             | gpp/next_score                                    | rst_IBUF                      |                2 |              7 |
+|  clk_IBUF_BUFG                            | key_de/inst/inst/Ps2Interface_i/rx_finish         | rst_IBUF                      |                1 |              8 |
+|  clk_IBUF_BUFG                            | key_de/inst/inst/Ps2Interface_i/rx_valid          | rst_IBUF                      |                2 |              8 |
+|  clk_fps_BUFG                             | gpp/next_pipe2_Y                                  | rst_IBUF                      |                2 |              9 |
+|  clk_fps_BUFG                             | gpp/rg/E[0]                                       | rst_IBUF                      |                3 |              9 |
+|  clk_25MHz_BUFG                           |                                                   | vga_inst/pixel_cnt[9]_i_1_n_0 |                5 |             10 |
+|  clk_25MHz_BUFG                           | vga_inst/line_cnt                                 | vga_inst/line_cnt[9]_i_1_n_0  |                4 |             10 |
+|  clk_fps_BUFG                             | gbp/next_bird_pos                                 | rst_IBUF                      |                8 |             10 |
+|  clk_IBUF_BUFG                            | key_de/key                                        | rst_IBUF                      |                2 |             10 |
+|  clk_IBUF_BUFG                            | key_de/inst/inst/Ps2Interface_i/frame[10]_i_1_n_0 | rst_IBUF                      |                2 |             11 |
+|  p_4_out                                  |                                                   |                               |                8 |             13 |
+|  ql/next_prev_bird_state_Y_reg[5]_i_2_n_0 |                                                   |                               |                5 |             14 |
+|  clk_fps_BUFG                             | gpp/next_pipe2_X                                  | rst_IBUF                      |                9 |             16 |
+|  clk_fps_BUFG                             | gpp/rg/get_random                                 | rst_IBUF                      |                3 |             16 |
+|  clk_fps_BUFG                             |                                                   | rst_IBUF                      |                8 |             17 |
+|  clk_IBUF_BUFG                            |                                                   | cd600/num[20]_i_1_n_0         |                6 |             21 |
+|  clk_IBUF_BUFG                            |                                                   | ex_1/count[21]_i_1_n_0        |                6 |             21 |
+|  clk_fps_BUFG                             | ql/qtable[10][19][0][21]_i_1_n_0                  |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[10][18][1][21]_i_1_n_0                  |                               |               12 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[10][0][0][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[10][0][1][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[10][10][1][21]_i_1_n_0                  |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[10][11][0][21]_i_1_n_0                  |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[10][16][1][21]_i_1_n_0                  |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[10][12][1][21]_i_1_n_0                  |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[10][19][1][21]_i_1_n_0                  |                               |               13 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[10][14][1][21]_i_1_n_0                  |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[10][10][0][21]_i_1_n_0                  |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[10][13][1][21]_i_1_n_0                  |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[10][12][0][21]_i_1_n_0                  |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[10][11][1][21]_i_1_n_0                  |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[0][9][1][21]_i_1_n_0                    |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[0][14][0][21]_i_1_n_0                   |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[0][15][0][21]_i_1_n_0                   |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[0][12][0][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[0][16][1][21]_i_1_n_0                   |                               |               12 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[0][16][0][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[0][17][0][21]_i_1_n_0                   |                               |                6 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[0][13][0][21]_i_1_n_0                   |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[0][13][1][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[0][0][0][21]_i_1_n_0                    |                               |                6 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[0][10][0][21]_i_1_n_0                   |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[0][11][1][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[0][10][1][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[0][14][1][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[0][0][1][21]_i_1_n_0                    |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[0][15][1][21]_i_1_n_0                   |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[0][11][0][21]_i_1_n_0                   |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[0][12][1][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[0][21][1][21]_i_1_n_0                   |                               |                6 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[0][1][1][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[0][23][1][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[0][17][1][21]_i_1_n_0                   |                               |               13 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[0][1][0][21]_i_1_n_0                    |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[0][22][1][21]_i_1_n_0                   |                               |               13 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[0][24][1][21]_i_1_n_0                   |                               |                6 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[0][20][0][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[0][25][0][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[0][19][1][21]_i_1_n_0                   |                               |               13 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[0][20][1][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[0][18][0][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[0][24][0][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[0][25][1][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[0][19][0][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[0][21][0][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[0][22][0][21]_i_1_n_0                   |                               |               12 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[0][23][0][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[0][18][1][21]_i_1_n_0                   |                               |               13 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[0][2][0][21]_i_1_n_0                    |                               |                5 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[0][3][1][21]_i_1_n_0                    |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[0][5][0][21]_i_1_n_0                    |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[0][6][1][21]_i_1_n_0                    |                               |               12 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[0][7][1][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[0][8][1][21]_i_1_n_0                    |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[0][8][0][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[0][9][0][21]_i_1_n_0                    |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[0][3][0][21]_i_1_n_0                    |                               |                6 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[0][2][1][21]_i_1_n_0                    |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[0][4][1][21]_i_1_n_0                    |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[0][5][1][21]_i_1_n_0                    |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[0][7][0][21]_i_1_n_0                    |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[0][4][0][21]_i_1_n_0                    |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[0][6][0][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[9][5][1][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[9][8][1][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[9][9][0][21]_i_1_n_0                    |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[9][7][0][21]_i_1_n_0                    |                               |                6 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[9][6][1][21]_i_1_n_0                    |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[9][8][0][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[9][9][1][21]_i_1_n_0                    |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[9][7][1][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[12][12][1][21]_i_1_n_0                  |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[10][2][1][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[10][1][1][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[10][23][0][21]_i_1_n_0                  |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[10][24][1][21]_i_1_n_0                  |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[10][25][0][21]_i_1_n_0                  |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[10][2][0][21]_i_1_n_0                   |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[10][24][0][21]_i_1_n_0                  |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[10][4][0][21]_i_1_n_0                   |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[10][1][0][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[10][4][1][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[10][5][1][21]_i_1_n_0                   |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[10][20][0][21]_i_1_n_0                  |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[10][21][0][21]_i_1_n_0                  |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[10][22][1][21]_i_1_n_0                  |                               |               14 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[10][3][1][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[10][20][1][21]_i_1_n_0                  |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[10][23][1][21]_i_1_n_0                  |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[10][25][1][21]_i_1_n_0                  |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[10][3][0][21]_i_1_n_0                   |                               |                5 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[10][21][1][21]_i_1_n_0                  |                               |                6 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[10][5][0][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[10][22][0][21]_i_1_n_0                  |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[11][18][0][21]_i_1_n_0                  |                               |                5 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[11][0][0][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[10][7][1][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[10][9][0][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[11][13][1][21]_i_1_n_0                  |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[11][16][0][21]_i_1_n_0                  |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[11][16][1][21]_i_1_n_0                  |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[10][8][0][21]_i_1_n_0                   |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[11][11][1][21]_i_1_n_0                  |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[10][9][1][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[11][17][0][21]_i_1_n_0                  |                               |                6 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[11][18][1][21]_i_1_n_0                  |                               |               12 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[10][6][1][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[11][0][1][21]_i_1_n_0                   |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[11][19][0][21]_i_1_n_0                  |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[10][7][0][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[11][19][1][21]_i_1_n_0                  |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[11][1][0][21]_i_1_n_0                   |                               |                6 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[11][12][1][21]_i_1_n_0                  |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[11][10][1][21]_i_1_n_0                  |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[11][1][1][21]_i_1_n_0                   |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[11][11][0][21]_i_1_n_0                  |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[11][14][0][21]_i_1_n_0                  |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[11][15][1][21]_i_1_n_0                  |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[11][17][1][21]_i_1_n_0                  |                               |               13 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[11][13][0][21]_i_1_n_0                  |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[11][14][1][21]_i_1_n_0                  |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[11][15][0][21]_i_1_n_0                  |                               |               13 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[10][6][0][21]_i_1_n_0                   |                               |                6 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[10][8][1][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[11][10][0][21]_i_1_n_0                  |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[11][12][0][21]_i_1_n_0                  |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[11][22][1][21]_i_1_n_0                  |                               |               15 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[11][21][1][21]_i_1_n_0                  |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[11][20][0][21]_i_1_n_0                  |                               |               14 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[11][4][0][21]_i_1_n_0                   |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[11][20][1][21]_i_1_n_0                  |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[11][2][0][21]_i_1_n_0                   |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[11][5][0][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[11][6][1][21]_i_1_n_0                   |                               |               12 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[11][25][0][21]_i_1_n_0                  |                               |               12 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[11][25][1][21]_i_1_n_0                  |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[11][23][1][21]_i_1_n_0                  |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[11][3][0][21]_i_1_n_0                   |                               |                5 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[11][7][0][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[11][7][1][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[11][8][0][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[11][4][1][21]_i_1_n_0                   |                               |                6 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[11][24][1][21]_i_1_n_0                  |                               |                6 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[11][2][1][21]_i_1_n_0                   |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[11][3][1][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[11][24][0][21]_i_1_n_0                  |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[11][21][0][21]_i_1_n_0                  |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[11][22][0][21]_i_1_n_0                  |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[11][5][1][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[11][6][0][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[11][23][0][21]_i_1_n_0                  |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[11][9][0][21]_i_1_n_0                   |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[12][12][0][21]_i_1_n_0                  |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[12][10][1][21]_i_1_n_0                  |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[12][10][0][21]_i_1_n_0                  |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[12][11][0][21]_i_1_n_0                  |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[12][11][1][21]_i_1_n_0                  |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[12][14][1][21]_i_1_n_0                  |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[12][13][1][21]_i_1_n_0                  |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[12][14][0][21]_i_1_n_0                  |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[12][16][1][21]_i_1_n_0                  |                               |               12 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[12][17][0][21]_i_1_n_0                  |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[12][13][0][21]_i_1_n_0                  |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[12][0][0][21]_i_1_n_0                   |                               |                6 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[12][18][0][21]_i_1_n_0                  |                               |                5 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[12][17][1][21]_i_1_n_0                  |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[12][18][1][21]_i_1_n_0                  |                               |               13 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[12][19][0][21]_i_1_n_0                  |                               |                6 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[11][9][1][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[12][15][1][21]_i_1_n_0                  |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[12][19][1][21]_i_1_n_0                  |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[11][8][1][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[12][15][0][21]_i_1_n_0                  |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[12][16][0][21]_i_1_n_0                  |                               |                6 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[12][0][1][21]_i_1_n_0                   |                               |                6 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[12][1][1][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[12][4][1][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[12][24][1][21]_i_1_n_0                  |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[12][25][1][21]_i_1_n_0                  |                               |                6 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[12][5][0][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[12][5][1][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[12][24][0][21]_i_1_n_0                  |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[12][1][0][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[12][6][0][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[12][22][1][21]_i_1_n_0                  |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[12][2][0][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[12][20][1][21]_i_1_n_0                  |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[12][22][0][21]_i_1_n_0                  |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[12][23][1][21]_i_1_n_0                  |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[12][21][0][21]_i_1_n_0                  |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[12][2][1][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[12][23][0][21]_i_1_n_0                  |                               |               12 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[12][3][1][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[12][25][0][21]_i_1_n_0                  |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[12][4][0][21]_i_1_n_0                   |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[12][20][0][21]_i_1_n_0                  |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[12][21][1][21]_i_1_n_0                  |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[12][3][0][21]_i_1_n_0                   |                               |                6 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[12][7][1][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[13][10][0][21]_i_1_n_0                  |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[12][6][1][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[13][11][1][21]_i_1_n_0                  |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[13][13][1][21]_i_1_n_0                  |                               |               12 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[13][12][1][21]_i_1_n_0                  |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[13][0][1][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[12][8][1][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[12][8][0][21]_i_1_n_0                   |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[12][9][1][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[13][10][1][21]_i_1_n_0                  |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[13][11][0][21]_i_1_n_0                  |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[13][0][0][21]_i_1_n_0                   |                               |                6 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[12][9][0][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[13][12][0][21]_i_1_n_0                  |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[12][7][0][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[13][13][0][21]_i_1_n_0                  |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[13][18][0][21]_i_1_n_0                  |                               |                5 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[13][19][0][21]_i_1_n_0                  |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[13][19][1][21]_i_1_n_0                  |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[13][20][0][21]_i_1_n_0                  |                               |               13 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[13][16][0][21]_i_1_n_0                  |                               |                6 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[13][17][0][21]_i_1_n_0                  |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[13][15][0][21]_i_1_n_0                  |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[13][14][1][21]_i_1_n_0                  |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[13][16][1][21]_i_1_n_0                  |                               |               12 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[13][18][1][21]_i_1_n_0                  |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[13][1][0][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[13][1][1][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[13][15][1][21]_i_1_n_0                  |                               |               13 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[13][17][1][21]_i_1_n_0                  |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[13][14][0][21]_i_1_n_0                  |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[13][20][1][21]_i_1_n_0                  |                               |                4 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[13][21][1][21]_i_1_n_0                  |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[13][22][0][21]_i_1_n_0                  |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[13][2][0][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[13][23][1][21]_i_1_n_0                  |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[13][25][0][21]_i_1_n_0                  |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[13][2][1][21]_i_1_n_0                   |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[13][23][0][21]_i_1_n_0                  |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[13][22][1][21]_i_1_n_0                  |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[13][21][0][21]_i_1_n_0                  |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[13][25][1][21]_i_1_n_0                  |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[13][3][0][21]_i_1_n_0                   |                               |                6 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[13][24][1][21]_i_1_n_0                  |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[13][24][0][21]_i_1_n_0                  |                               |               12 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[13][6][0][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[1][0][1][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[13][9][0][21]_i_1_n_0                   |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[1][11][0][21]_i_1_n_0                   |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[13][6][1][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[13][7][0][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[13][7][1][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[1][11][1][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[13][8][0][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[13][5][1][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[1][10][0][21]_i_1_n_0                   |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[13][4][0][21]_i_1_n_0                   |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[13][9][1][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[1][0][0][21]_i_1_n_0                    |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[1][10][1][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[13][5][0][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[13][3][1][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[13][4][1][21]_i_1_n_0                   |                               |                6 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[13][8][1][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[1][15][0][21]_i_1_n_0                   |                               |               12 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[1][18][0][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[1][18][1][21]_i_1_n_0                   |                               |               12 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[1][19][1][21]_i_1_n_0                   |                               |               13 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[1][19][0][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[1][1][0][21]_i_1_n_0                    |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[1][13][1][21]_i_1_n_0                   |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[1][14][1][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[1][22][0][21]_i_1_n_0                   |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[1][22][1][21]_i_1_n_0                   |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[1][16][0][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[1][21][0][21]_i_1_n_0                   |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[1][23][1][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[1][20][1][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[1][14][0][21]_i_1_n_0                   |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[1][2][0][21]_i_1_n_0                    |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[1][12][1][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[1][20][0][21]_i_1_n_0                   |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[1][16][1][21]_i_1_n_0                   |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[1][21][1][21]_i_1_n_0                   |                               |                6 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[1][23][0][21]_i_1_n_0                   |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[1][25][0][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[1][17][0][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[1][24][0][21]_i_1_n_0                   |                               |               12 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[1][3][0][21]_i_1_n_0                    |                               |                4 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[1][3][1][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[1][4][0][21]_i_1_n_0                    |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[1][13][0][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[1][4][1][21]_i_1_n_0                    |                               |                6 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[1][15][1][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[1][17][1][21]_i_1_n_0                   |                               |               13 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[1][12][0][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[1][1][1][21]_i_1_n_0                    |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[1][25][1][21]_i_1_n_0                   |                               |                5 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[1][24][1][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[1][2][1][21]_i_1_n_0                    |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[2][14][0][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[2][0][0][21]_i_1_n_0                    |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[2][11][1][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[1][7][1][21]_i_1_n_0                    |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[2][16][0][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[2][15][0][21]_i_1_n_0                   |                               |               13 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[2][12][0][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[1][6][0][21]_i_1_n_0                    |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[1][8][1][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[1][9][1][21]_i_1_n_0                    |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[2][11][0][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[1][5][0][21]_i_1_n_0                    |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[1][5][1][21]_i_1_n_0                    |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[2][13][1][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[1][7][0][21]_i_1_n_0                    |                               |                6 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[2][0][1][21]_i_1_n_0                    |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[2][12][1][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[1][8][0][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[2][14][1][21]_i_1_n_0                   |                               |                6 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[2][10][0][21]_i_1_n_0                   |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[1][6][1][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[2][13][0][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[2][15][1][21]_i_1_n_0                   |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[2][10][1][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[1][9][0][21]_i_1_n_0                    |                               |               12 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[2][2][0][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[2][17][1][21]_i_1_n_0                   |                               |               14 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[2][17][0][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[2][19][0][21]_i_1_n_0                   |                               |                6 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[2][22][1][21]_i_1_n_0                   |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[2][23][0][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[2][18][1][21]_i_1_n_0                   |                               |               12 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[2][1][1][21]_i_1_n_0                    |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[2][19][1][21]_i_1_n_0                   |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[2][23][1][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[2][20][0][21]_i_1_n_0                   |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[2][18][0][21]_i_1_n_0                   |                               |                5 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[2][1][0][21]_i_1_n_0                    |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[2][22][0][21]_i_1_n_0                   |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[2][21][1][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[2][25][0][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[2][20][1][21]_i_1_n_0                   |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[2][24][1][21]_i_1_n_0                   |                               |                6 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[2][25][1][21]_i_1_n_0                   |                               |                6 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[2][16][1][21]_i_1_n_0                   |                               |               14 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[2][24][0][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[2][21][0][21]_i_1_n_0                   |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[2][7][1][21]_i_1_n_0                    |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[2][2][1][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[2][4][0][21]_i_1_n_0                    |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[2][6][1][21]_i_1_n_0                    |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[2][8][0][21]_i_1_n_0                    |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[2][3][1][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[2][9][1][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[2][4][1][21]_i_1_n_0                    |                               |                6 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[3][10][1][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[2][7][0][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[2][9][0][21]_i_1_n_0                    |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[3][0][1][21]_i_1_n_0                    |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[3][11][1][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[3][0][0][21]_i_1_n_0                    |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[3][12][1][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[3][13][1][21]_i_1_n_0                   |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[2][5][1][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[2][3][0][21]_i_1_n_0                    |                               |                6 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[2][8][1][21]_i_1_n_0                    |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[3][10][0][21]_i_1_n_0                   |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[3][11][0][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[3][12][0][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[3][13][0][21]_i_1_n_0                   |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[2][5][0][21]_i_1_n_0                    |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[2][6][0][21]_i_1_n_0                    |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[3][15][0][21]_i_1_n_0                   |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[3][16][0][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[3][19][0][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[3][20][0][21]_i_1_n_0                   |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[3][4][0][21]_i_1_n_0                    |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[3][4][1][21]_i_1_n_0                    |                               |                6 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[3][5][0][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[3][20][1][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[3][2][0][21]_i_1_n_0                    |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[3][17][0][21]_i_1_n_0                   |                               |                5 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[3][15][1][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[3][19][1][21]_i_1_n_0                   |                               |               12 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[3][18][0][21]_i_1_n_0                   |                               |                5 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[3][17][1][21]_i_1_n_0                   |                               |               13 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[3][14][1][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[3][22][0][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[3][22][1][21]_i_1_n_0                   |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[3][21][0][21]_i_1_n_0                   |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[3][18][1][21]_i_1_n_0                   |                               |               13 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[3][25][1][21]_i_1_n_0                   |                               |                5 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[3][21][1][21]_i_1_n_0                   |                               |                6 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[3][24][0][21]_i_1_n_0                   |                               |               12 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[3][16][1][21]_i_1_n_0                   |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[3][25][0][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[3][3][0][21]_i_1_n_0                    |                               |                6 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[3][1][0][21]_i_1_n_0                    |                               |                5 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[3][23][1][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[3][1][1][21]_i_1_n_0                    |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[3][23][0][21]_i_1_n_0                   |                               |               15 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[3][24][1][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[3][2][1][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[3][14][0][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[3][3][1][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[4][0][1][21]_i_1_n_0                    |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[4][16][0][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[4][10][1][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[3][5][1][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[3][7][1][21]_i_1_n_0                    |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[4][15][1][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[4][17][1][21]_i_1_n_0                   |                               |               12 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[4][18][1][21]_i_1_n_0                   |                               |               13 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[4][12][0][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[4][15][0][21]_i_1_n_0                   |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[3][6][0][21]_i_1_n_0                    |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[3][8][0][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[4][0][0][21]_i_1_n_0                    |                               |                6 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[4][11][0][21]_i_1_n_0                   |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[4][18][0][21]_i_1_n_0                   |                               |                5 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[4][11][1][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[4][13][0][21]_i_1_n_0                   |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[3][6][1][21]_i_1_n_0                    |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[3][8][1][21]_i_1_n_0                    |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[4][19][0][21]_i_1_n_0                   |                               |                5 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[3][7][0][21]_i_1_n_0                    |                               |                6 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[4][13][1][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[3][9][1][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[4][10][0][21]_i_1_n_0                   |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[4][14][1][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[4][16][1][21]_i_1_n_0                   |                               |               13 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[4][17][0][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[3][9][0][21]_i_1_n_0                    |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[4][12][1][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[4][14][0][21]_i_1_n_0                   |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[4][19][1][21]_i_1_n_0                   |                               |               14 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[4][21][1][21]_i_1_n_0                   |                               |                6 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[4][20][0][21]_i_1_n_0                   |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[4][23][0][21]_i_1_n_0                   |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[4][20][1][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[4][4][0][21]_i_1_n_0                    |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[4][21][0][21]_i_1_n_0                   |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[4][4][1][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[4][1][1][21]_i_1_n_0                    |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[4][5][0][21]_i_1_n_0                    |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[4][5][1][21]_i_1_n_0                    |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[4][6][0][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[4][23][1][21]_i_1_n_0                   |                               |                4 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[4][24][0][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[4][24][1][21]_i_1_n_0                   |                               |                6 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[4][22][1][21]_i_1_n_0                   |                               |               14 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[4][25][0][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[4][25][1][21]_i_1_n_0                   |                               |                6 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[4][2][0][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[4][3][0][21]_i_1_n_0                    |                               |                5 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[4][3][1][21]_i_1_n_0                    |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[4][6][1][21]_i_1_n_0                    |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[4][7][0][21]_i_1_n_0                    |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[4][2][1][21]_i_1_n_0                    |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[4][22][0][21]_i_1_n_0                   |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[4][1][0][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[4][7][1][21]_i_1_n_0                    |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[4][8][0][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[5][22][1][21]_i_1_n_0                   |                               |               13 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[5][23][0][21]_i_1_n_0                   |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[5][14][0][21]_i_1_n_0                   |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[5][18][1][21]_i_1_n_0                   |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[5][13][0][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[5][18][0][21]_i_1_n_0                   |                               |                5 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[5][16][0][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[5][16][1][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[5][19][0][21]_i_1_n_0                   |                               |                6 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[5][19][1][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[5][1][0][21]_i_1_n_0                    |                               |                6 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[4][9][0][21]_i_1_n_0                    |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[5][13][1][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[5][17][0][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[5][1][1][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[5][10][0][21]_i_1_n_0                   |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[5][11][0][21]_i_1_n_0                   |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[5][15][1][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[5][15][0][21]_i_1_n_0                   |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[4][9][1][21]_i_1_n_0                    |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[5][12][1][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[5][10][1][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[5][11][1][21]_i_1_n_0                   |                               |                5 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[5][17][1][21]_i_1_n_0                   |                               |               12 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[5][0][0][21]_i_1_n_0                    |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[4][8][1][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[5][20][1][21]_i_1_n_0                   |                               |                4 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[5][21][0][21]_i_1_n_0                   |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[5][12][0][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[5][20][0][21]_i_1_n_0                   |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[5][14][1][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[5][21][1][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[5][22][0][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[5][0][1][21]_i_1_n_0                    |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[5][24][1][21]_i_1_n_0                   |                               |                6 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[6][0][0][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[5][25][1][21]_i_1_n_0                   |                               |                5 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[5][23][1][21]_i_1_n_0                   |                               |                5 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[5][8][1][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[5][9][1][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[6][0][1][21]_i_1_n_0                    |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[5][4][0][21]_i_1_n_0                    |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[5][9][0][21]_i_1_n_0                    |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[5][3][1][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[5][4][1][21]_i_1_n_0                    |                               |                6 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[6][10][1][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[5][3][0][21]_i_1_n_0                    |                               |                4 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[6][11][1][21]_i_1_n_0                   |                               |                5 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[5][6][0][21]_i_1_n_0                    |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[6][12][0][21]_i_1_n_0                   |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[5][7][0][21]_i_1_n_0                    |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[6][11][0][21]_i_1_n_0                   |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[5][7][1][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[5][2][1][21]_i_1_n_0                    |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[5][5][1][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[6][12][1][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[5][5][0][21]_i_1_n_0                    |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[6][10][0][21]_i_1_n_0                   |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[5][8][0][21]_i_1_n_0                    |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[5][24][0][21]_i_1_n_0                   |                               |               12 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[6][13][0][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[5][2][0][21]_i_1_n_0                    |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[5][6][1][21]_i_1_n_0                    |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[5][25][0][21]_i_1_n_0                   |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[6][18][1][21]_i_1_n_0                   |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[6][19][0][21]_i_1_n_0                   |                               |                5 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[6][13][1][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[6][15][0][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[6][20][0][21]_i_1_n_0                   |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[6][19][1][21]_i_1_n_0                   |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[6][20][1][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[6][16][1][21]_i_1_n_0                   |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[6][16][0][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[6][17][0][21]_i_1_n_0                   |                               |                6 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[6][18][0][21]_i_1_n_0                   |                               |                4 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[6][14][0][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[6][15][1][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[6][1][1][21]_i_1_n_0                    |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[6][21][0][21]_i_1_n_0                   |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[6][22][0][21]_i_1_n_0                   |                               |               12 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[6][17][1][21]_i_1_n_0                   |                               |               13 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[6][21][1][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[6][1][0][21]_i_1_n_0                    |                               |                6 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[6][22][1][21]_i_1_n_0                   |                               |               15 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[6][14][1][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[6][4][0][21]_i_1_n_0                    |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[6][25][0][21]_i_1_n_0                   |                               |               12 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[6][5][1][21]_i_1_n_0                    |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[6][24][0][21]_i_1_n_0                   |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[6][4][1][21]_i_1_n_0                    |                               |                5 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[6][24][1][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[6][7][0][21]_i_1_n_0                    |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[6][2][0][21]_i_1_n_0                    |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[6][3][0][21]_i_1_n_0                    |                               |                5 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[6][6][1][21]_i_1_n_0                    |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[6][2][1][21]_i_1_n_0                    |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[6][3][1][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[6][25][1][21]_i_1_n_0                   |                               |                6 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[6][23][0][21]_i_1_n_0                   |                               |               14 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[6][23][1][21]_i_1_n_0                   |                               |                6 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[6][5][0][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[6][6][0][21]_i_1_n_0                    |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[7][10][0][21]_i_1_n_0                   |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[7][17][1][21]_i_1_n_0                   |                               |               12 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[7][10][1][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[7][11][0][21]_i_1_n_0                   |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[7][0][1][21]_i_1_n_0                    |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[7][12][1][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[7][16][1][21]_i_1_n_0                   |                               |               12 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[6][9][1][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[6][8][0][21]_i_1_n_0                    |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[7][12][0][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[6][8][1][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[7][13][1][21]_i_1_n_0                   |                               |                6 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[7][14][1][21]_i_1_n_0                   |                               |                6 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[7][15][0][21]_i_1_n_0                   |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[7][18][0][21]_i_1_n_0                   |                               |                5 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[7][18][1][21]_i_1_n_0                   |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[7][19][0][21]_i_1_n_0                   |                               |                5 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[7][1][0][21]_i_1_n_0                    |                               |                6 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[7][13][0][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[7][1][1][21]_i_1_n_0                    |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[6][7][1][21]_i_1_n_0                    |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[7][11][1][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[7][14][0][21]_i_1_n_0                   |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[7][17][0][21]_i_1_n_0                   |                               |                6 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[7][19][1][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[7][16][0][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[7][20][0][21]_i_1_n_0                   |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[7][20][1][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[7][15][1][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[7][21][0][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[6][9][0][21]_i_1_n_0                    |                               |               13 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[7][0][0][21]_i_1_n_0                    |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[7][23][1][21]_i_1_n_0                   |                               |                5 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[7][3][0][21]_i_1_n_0                    |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[7][22][0][21]_i_1_n_0                   |                               |               13 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[7][23][0][21]_i_1_n_0                   |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[7][25][0][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[7][24][1][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[7][8][0][21]_i_1_n_0                    |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[7][9][1][21]_i_1_n_0                    |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[7][3][1][21]_i_1_n_0                    |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[7][22][1][21]_i_1_n_0                   |                               |               13 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[7][5][1][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[7][8][1][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[7][24][0][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[7][4][0][21]_i_1_n_0                    |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[7][2][1][21]_i_1_n_0                    |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[7][5][0][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[7][6][0][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[7][9][0][21]_i_1_n_0                    |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[7][2][0][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[7][25][1][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[7][6][1][21]_i_1_n_0                    |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[8][0][1][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[8][10][0][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[7][21][1][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[7][7][0][21]_i_1_n_0                    |                               |                6 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[8][0][0][21]_i_1_n_0                    |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[7][7][1][21]_i_1_n_0                    |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[8][10][1][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[8][11][0][21]_i_1_n_0                   |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[7][4][1][21]_i_1_n_0                    |                               |                5 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[8][14][1][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[8][18][1][21]_i_1_n_0                   |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[8][18][0][21]_i_1_n_0                   |                               |                4 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[8][1][0][21]_i_1_n_0                    |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[8][16][1][21]_i_1_n_0                   |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[8][13][1][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[8][16][0][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[8][17][1][21]_i_1_n_0                   |                               |               14 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[8][19][0][21]_i_1_n_0                   |                               |                5 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[8][1][1][21]_i_1_n_0                    |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[8][12][1][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[8][20][0][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[8][20][1][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[8][17][0][21]_i_1_n_0                   |                               |                5 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[8][14][0][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[8][15][1][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[8][19][1][21]_i_1_n_0                   |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[8][15][0][21]_i_1_n_0                   |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[8][11][1][21]_i_1_n_0                   |                               |                6 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[8][13][0][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[8][12][0][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[8][2][1][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[8][3][0][21]_i_1_n_0                    |                               |                6 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[8][3][1][21]_i_1_n_0                    |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[8][4][1][21]_i_1_n_0                    |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[8][2][0][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[8][6][1][21]_i_1_n_0                    |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[8][7][1][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[8][8][0][21]_i_1_n_0                    |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[8][8][1][21]_i_1_n_0                    |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[8][25][1][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[8][6][0][21]_i_1_n_0                    |                               |               12 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[8][7][0][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[8][23][0][21]_i_1_n_0                   |                               |               14 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[8][9][0][21]_i_1_n_0                    |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[8][22][0][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[8][23][1][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[8][25][0][21]_i_1_n_0                   |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[8][22][1][21]_i_1_n_0                   |                               |               13 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[8][24][1][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[8][21][1][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[8][5][0][21]_i_1_n_0                    |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[8][5][1][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[8][24][0][21]_i_1_n_0                   |                               |               12 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[8][4][0][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[8][21][0][21]_i_1_n_0                   |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[9][10][0][21]_i_1_n_0                   |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[9][11][0][21]_i_1_n_0                   |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[9][17][0][21]_i_1_n_0                   |                               |                5 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[9][19][0][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[9][11][1][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[9][12][0][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[9][17][1][21]_i_1_n_0                   |                               |               13 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[9][20][0][21]_i_1_n_0                   |                               |               12 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[9][21][0][21]_i_1_n_0                   |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[9][24][0][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[9][12][1][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[9][13][1][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[9][14][0][21]_i_1_n_0                   |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[9][15][0][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[9][15][1][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[9][14][1][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[9][1][0][21]_i_1_n_0                    |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[9][1][1][21]_i_1_n_0                    |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[9][21][1][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[9][22][0][21]_i_1_n_0                   |                               |               12 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[9][22][1][21]_i_1_n_0                   |                               |               12 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[9][23][0][21]_i_1_n_0                   |                               |               12 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[9][23][1][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[9][16][0][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[8][9][1][21]_i_1_n_0                    |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[9][0][1][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[9][0][0][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[9][16][1][21]_i_1_n_0                   |                               |               12 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[9][18][1][21]_i_1_n_0                   |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[9][20][1][21]_i_1_n_0                   |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[9][13][0][21]_i_1_n_0                   |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[9][19][1][21]_i_1_n_0                   |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[9][18][0][21]_i_1_n_0                   |                               |                4 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[9][10][1][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[9][25][1][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[9][4][0][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[9][25][0][21]_i_1_n_0                   |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[9][4][1][21]_i_1_n_0                    |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[9][2][1][21]_i_1_n_0                    |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[9][3][0][21]_i_1_n_0                    |                               |                4 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[9][3][1][21]_i_1_n_0                    |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[9][5][0][21]_i_1_n_0                    |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[9][24][1][21]_i_1_n_0                   |                               |                7 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[9][2][0][21]_i_1_n_0                    |                               |                9 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[9][6][0][21]_i_1_n_0                    |                               |               11 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[10][14][0][21]_i_1_n_0                  |                               |               10 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[10][15][0][21]_i_1_n_0                  |                               |               12 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[10][17][0][21]_i_1_n_0                  |                               |                5 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[10][15][1][21]_i_1_n_0                  |                               |                8 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[10][16][0][21]_i_1_n_0                  |                               |                5 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[10][17][1][21]_i_1_n_0                  |                               |               16 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[10][18][0][21]_i_1_n_0                  |                               |                6 |             22 |
+|  clk_fps_BUFG                             | ql/qtable[10][13][0][21]_i_1_n_0                  |                               |                9 |             22 |
+|  clk_25MHz_BUFG                           |                                                   |                               |               16 |             42 |
+|  clk_fps_BUFG                             |                                                   | ql/init_X[5]_i_1_n_0          |               22 |             49 |
+|  fps_pulse_BUFG                           |                                                   |                               |               23 |             52 |
+|  clk_IBUF_BUFG                            |                                                   | rst_IBUF                      |               15 |             63 |
+|  write                                    |                                                   |                               |               63 |            154 |
++-------------------------------------------+---------------------------------------------------+-------------------------------+------------------+----------------+
+
+
