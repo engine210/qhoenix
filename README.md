@@ -63,8 +63,8 @@ Also, we use Q-Learning method to train the bird flaps by it self on the same FP
 * **Qtable**
 <center><img src="https://i.imgur.com/M0Xtgsc.png" width="250"/></center>
 
-> 𝑆𝑥 = 𝑥/𝑅𝑒𝑠𝑜𝑙𝑢𝑡𝑖𝑜𝑛
-> 𝑆𝑦 = 𝑦/𝑅𝑒𝑠𝑜𝑙𝑢𝑡𝑖𝑜𝑛
+> 𝑆𝑥 = 𝑥/𝑅𝑒𝑠𝑜𝑙𝑢𝑡𝑖𝑜𝑛,
+> 𝑆𝑦 = 𝑦/𝑅𝑒𝑠𝑜𝑙𝑢𝑡𝑖𝑜𝑛,
 > 𝑅𝑒𝑠𝑜𝑙𝑢𝑡𝑖𝑜𝑛 = 20
 
 | State (Sx, Sy) | Jump  | Don't jump |
@@ -102,5 +102,5 @@ repeat
 |      36      |   99+ |
 
 ## Reference
-[SarvagyaVaish's project](https://github.com/SarvagyaVaish/FlappyBirdRL) 
+[SarvagyaVaish's project](https://github.com/SarvagyaVaish/FlappyBirdRL)
 [enhuiz's project](https://github.com/Enhuiz/flappybird-ql)
