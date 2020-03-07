@@ -1,6 +1,7 @@
 # qhoenix
 Flappy Bird with Q-Learning implementation on Xilinx Digilent Basys 3 Artix-7 FPGA Board.
-<div style="text-align:center"><a href="https://www.youtube.com/watch?v=79jxCXUPers"><img src="https://i.imgur.com/Rut3BXg.png" style="width:200px;"/></a></div>
+<div style="text-align:center"><a href="https://www.youtube.com/watch?v=79jxCXUPers"><img src="https://i.imgur.com/Rut3BXg.png" width="250"/></a></div>
+
 
 ## Introduction
 Flappy Bird is a 2D mobile game. A bird named “Faby” continuously move to the left. The bird briefly flaps (jump) upward each time we pressed the space key. A set of pipes keep moving right. The bird died once it touch the pipes, ground or sky. We implement the game on the FPGA board. Using keyboard as input and VGA as output.
